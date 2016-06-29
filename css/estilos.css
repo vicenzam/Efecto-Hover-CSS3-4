@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: gray;
+}
+
+.absoluto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.arbol {
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  max-height: 333px;
+  display: block;
+  margin: 40px auto;
+}
+
+div.arbol:hover img {
+  opacity: 0.5;
+}
+
+div.arbol:hover div.texto:before {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+div.arbol:hover div.texto h2 {
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+}
+
+div.arbol:hover div.texto h2 i {
+  -webkit-transform: translate3d(0, -10px, 0);
+          transform: translate3d(0, -10px, 0);
+  opacity: 1;
+}
+
+div.arbol img {
+  opacity: 0.9;
+  transition: opacity 0.35s;
+}
+
+div.arbol a {
+  z-index: 100;
+}
+
+div.arbol div.texto {
+  font-family: 'Dosis', sans-serif;
+  color: #fff;
+}
+
+div.arbol div.texto:before {
+  content: '';
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 10px;
+  background: #fff;
+  width: 100%;
+  -webkit-transform: translate3d(0, 10px, 0);
+          transform: translate3d(0, 10px, 0);
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+div.arbol div.texto h2 {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  padding: 1em 1.5em;
+  font-size: 2.1em;
+  font-weight: 300;
+  -webkit-transform: translate3d(0, -45px, 0);
+          transform: translate3d(0, -45px, 0);
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+div.arbol div.texto h2 span {
+  font-weight: 700;
+}
+
+div.arbol div.texto h2 i {
+  font-style: normal;
+  opacity: 0;
+  -webkit-transform: translate3d(0, -45px, 0);
+          transform: translate3d(0, -45px, 0);
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
